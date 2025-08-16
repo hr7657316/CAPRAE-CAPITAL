@@ -2,7 +2,7 @@
 class GeminiAIService {
     constructor() {
         // Replace with your actual Gemini API key
-        this.apiKey = 'AIzaSyDZ0AUBBjpjaeQOA64tulcu65h4Chwvv-Q';
+        this.apiKey = 'put here';
         this.baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
         this.model = 'gemini-1.5-flash';
     }
