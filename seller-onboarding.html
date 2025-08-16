@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Business - Caprae Capital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seller-onboarding-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            <div class="nav-buttons">
+                <div class="nav-status">
+                    <div class="status-indicator">
+                        <div class="green-dot"></div>
+                        <span>Saved just now</span>
+                    </div>
+                    <button class="btn-help">Need help?</button>
+                    <button class="btn-exit">Exit</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="onboarding-container">
+            <!-- Step 1: The Basics Intro -->
+            <div class="step-content" id="step1" style="display: block;">
+                <div class="basics-intro">
+                    <div class="basics-illustration">
+                        <div class="person-with-apps">
+                            <div class="person">👤</div>
+                            <div class="apps-grid">
+                                <div class="app-icon saas">💻</div>
+                                <div class="app-icon profile">👤</div>
+                                <div class="app-icon ai active">🧠</div>
+                                <div class="app-icon desktop">🖥️</div>
+                                <div class="app-icon cart">🛒</div>
+                                <div class="app-icon folder">📁</div>
+                                <div class="app-icon dollar">💰</div>
+                                <div class="app-icon blank">⚪</div>
+                                <div class="app-icon blank">⚪</div>
+                                <div class="app-platform">💿</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h1 class="step-title">The basics</h1>
+                    <p class="step-subtitle">Add information about your business to entice buyers.</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Startup Description -->
+            <div class="step-content" id="step2" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How would you describe your startup?</h1>
+                
+                <div class="startup-categories">
+                    <div class="category-card" data-value="saas">
+                        <div class="category-icon">☁️</div>
+                        <span>SaaS</span>
+                    </div>
+                    <div class="category-card" data-value="digital">
+                        <div class="category-icon">🌐</div>
+                        <span>Digital</span>
+                    </div>
+                    <div class="category-card" data-value="shopify">
+                        <div class="category-icon">🛍️</div>
+                        <span>Shopify app</span>
+                    </div>
+                    <div class="category-card" data-value="ai">
+                        <div class="category-icon">🤖</div>
+                        <span>AI</span>
+                    </div>
+                    <div class="category-card" data-value="content">
+                        <div class="category-icon">📝</div>
+                        <span>Content</span>
+                    </div>
+                    <div class="category-card" data-value="agency">
+                        <div class="category-icon">👥</div>
+                        <span>Agency</span>
+                    </div>
+                    <div class="category-card" data-value="crypto">
+                        <div class="category-icon">₿</div>
+                        <span>Crypto</span>
+                    </div>
+                    <div class="category-card" data-value="ecommerce">
+                        <div class="category-icon">🛒</div>
+                        <span>Ecommerce</span>
+                    </div>
+                    <div class="category-card" data-value="mobile">
+                        <div class="category-icon">📱</div>
+                        <span>Mobile app</span>
+                    </div>
+                    <div class="category-card" data-value="marketplace">
+                        <div class="category-icon">🏪</div>
+                        <span>Marketplace</span>
+                    </div>
+                    <div class="category-card" data-value="newsletter">
+                        <div class="category-icon">📧</div>
+                        <span>Newsletter</span>
+                    </div>
+                    <div class="category-card" data-value="other">
+                        <div class="category-icon">📦</div>
+                        <span>Other</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Startup Name -->
+            <div class="step-content" id="step3" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C8 8 5 5 5 5M8 8C8 8 11 5 11 5M8 8C8 8 8 14 8 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">What is your startup's name?</h1>
+                
+                <div class="form-group">
+                    <label for="startup-name">Startup name</label>
+                    <input type="text" id="startup-name" name="startup-name" placeholder="Pied Piper" class="form-input" />
+                </div>
+            </div>
+
+            <!-- Step 4: Startup URL -->
+            <div class="step-content" id="step4" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C8 8 5 5 5 5M8 8C8 8 11 5 11 5M8 8C8 8 8 14 8 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">What's your startup's URL?</h1>
+                
+                <div class="form-group">
+                    <label for="startup-url">Website</label>
+                    <input type="text" id="startup-url" name="startup-url" placeholder="piedpiper.ai" class="form-input" />
+                </div>
+            </div>
+
+            <!-- Step 5: Selling Structure -->
+            <div class="step-content" id="step5" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C8 8 5 5 5 5M8 8C8 8 11 5 11 5M8 8C8 8 8 14 8 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">How are you selling your startup?</h1>
+                
+                <div class="selling-structure-options">
+                    <div class="structure-option individual-option" data-value="individual">
+                        <h3>As an individual</h3>
+                        <p>Sell your startup under your own name. Examples include sole proprietors.</p>
+                        
+                        <div class="individual-form" style="display: none;">
+                            <div class="name-fields">
+                                <div class="form-group">
+                                    <label for="legal-first-name">Legal first name</label>
+                                    <input type="text" id="legal-first-name" placeholder="rgerg" class="form-input" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="legal-last-name">Legal last name</label>
+                                    <input type="text" id="legal-last-name" placeholder="ergef" class="form-input" />
+                                </div>
+                            </div>
+                            <p class="privacy-note">This will not be visible to a buyer until they send an offer (LOI).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="structure-option company-option" data-value="company">
+                        <h3>As a company</h3>
+                        <p>Sell your startup under your business entity name. Examples include LLCs and corporations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6: Metrics Connection -->
+            <div class="step-content" id="step6" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C8 8 5 5 5 5M8 8C8 8 11 5 11 5M8 8C8 8 8 14 8 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">Connect metrics to pre-fill your data</h1>
+                <p class="step-subtitle">Entice buyers with real-time data and distinguish your listing with the metrics connected badge.</p>
+                
+                <div class="metrics-connections">
+                    <div class="metric-connection">
+                        <div class="connection-info">
+                            <h3>Customer metrics</h3>
+                            <p>Connect your customer data with ChartMogul (free trial available).</p>
+                        </div>
+                        <button class="connect-btn">Connect</button>
+                    </div>
+                    
+                    <div class="metric-connection">
+                        <div class="connection-info">
+                            <h3>Web traffic</h3>
+                            <p>Connect your web traffic data with Google Analytics.</p>
+                        </div>
+                        <button class="connect-btn">Connect</button>
+                    </div>
+                </div>
+                
+                <div class="skip-section">
+                    <button class="skip-btn">Skip</button>
+                </div>
+            </div>
+
+            <!-- Step 7: Competitors -->
+            <div class="step-content" id="step7" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">Who are your competitors?</h1>
+                
+                <div class="form-group">
+                    <label class="form-label">Enter a competitor and press enter to add</label>
+                    <div class="competitor-input-container">
+                        <input type="text" class="competitor-input" placeholder="Google" id="competitorInput">
+                        <div class="competitors-list" id="competitorsList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8: Startup Description -->
+            <div class="step-content" id="step8" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How would you describe your startup?</h1>
+                <div class="ai-suggestion">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 2L8 14M2 8L14 8" stroke="#667eea" stroke-width="2"/>
+                    </svg>
+                    <span>Caprae AI wrote a description for you, but feel free to edit it.</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Enter a description of your startup</label>
+                    <textarea class="description-textarea" placeholder="This startup provides a secure communication platform designed for businesses that prioritize data privacy and seamless collaboration. The platform enables teams to send messages, share files, and collaborate on projects within a secure environment, ensuring that sensitive business information remains protected from unauthorized access. With its user-friendly interface and robust encryption..." rows="6"></textarea>
+                    <div class="character-count">
+                        <span class="char-used">443</span> characters left
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 9: Keywords -->
+            <div class="step-content" id="step9" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">What are some search keywords for your startup?</h1>
+                
+                <div class="ai-suggestions">
+                    <div class="suggestions-header">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2L8 14M2 8L14 8" stroke="#667eea" stroke-width="2"/>
+                        </svg>
+                        <span>Our suggestions</span>
+                    </div>
+                    <div class="suggestion-tags">
+                        <span class="suggestion-tag">encrypted messaging</span>
+                        <span class="suggestion-tag">file sharing</span>
+                        <span class="suggestion-tag">data privacy</span>
+                        <span class="suggestion-tag">enterprise communication</span>
+                        <span class="suggestion-tag">secure collaboration</span>
+                        <button class="more-suggestions">→</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Enter a keyword and press enter to add</label>
+                    <input type="text" class="keyword-input" placeholder="Task management" id="keywordInput">
+                    <div class="keywords-list" id="keywordsList"></div>
+                </div>
+            </div>
+
+            <!-- Step 10: Asking Price -->
+            <div class="step-content" id="step10" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">What asking price will you set?</h1>
+                <p class="step-subtitle">Based on our quarterly acquisition reports, we suggest starting within this range.</p>
+                
+                <div class="price-display">
+                    <div class="price-amount">
+                        <span class="currency">$</span>
+                        <span class="amount" id="priceAmount">1.3M</span>
+                        <button class="edit-price">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M12 4L8 8L4 4" stroke="#667eea" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="price-slider">
+                        <input type="range" class="slider" min="500000" max="5000000" value="1300000" step="100000" id="priceSlider">
+                        <div class="slider-labels">
+                            <span>More attractive to buyers</span>
+                            <span>Less attractive to buyers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="valuation-methods">
+                        <div class="method ai-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L13.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" stroke="#667eea" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <span>AI</span>
+                        </div>
+                        <div class="method revenue-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 1V23M17 5H9.5C8.11929 5 7 6.11929 7 7.5S8.11929 10 9.5 10H14.5C15.8807 10 17 11.1193 17 12.5S15.8807 15 14.5 15H7" stroke="#667eea" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <span>2.5x revenue</span>
+                        </div>
+                    </div>
+                    
+                    <p class="price-note">
+                        Your suggested asking price range might change once we've reviewed your full listing or if your startup meets <a href="#" class="criteria-link">certain criteria</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 11: Selling Structure -->
+            <div class="step-content" id="step11" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C6.34315 8 5 6.65685 5 5C5 3.34315 6.34315 2 8 2C9.65685 2 11 3.34315 11 5C11 6.65685 9.65685 8 8 8Z" fill="#6B7280"/>
+                        <path d="M13 14C13 11.7909 11.2091 10 9 10H7C4.79086 10 3 11.7909 3 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">How are you selling your startup?</h1>
+                
+                <div class="selling-options">
+                    <div class="selling-option" data-value="individual">
+                        <div class="option-content">
+                            <h3>As an individual</h3>
+                            <p>Sell your startup under your own name. Examples include sole proprietors.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="selling-option" data-value="company">
+                        <div class="option-content">
+                            <h3>As a company</h3>
+                            <p>Sell your startup under your business entity name. Examples include LLCs and corporations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 12: Metrics Connection -->
+            <div class="step-content" id="step12" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C6.34315 8 5 6.65685 5 5C5 3.34315 6.34315 2 8 2C9.65685 2 11 3.34315 11 5C11 6.65685 9.65685 8 8 8Z" fill="#6B7280"/>
+                        <path d="M13 14C13 11.7909 11.2091 10 9 10H7C4.79086 10 3 11.7909 3 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">Connect metrics to pre-fill your data</h1>
+                <p class="step-subtitle">Entice buyers with real-time data and distinguish your listing with the metrics connected badge.</p>
+                
+                <div class="metrics-connections">
+                    <div class="metric-connection">
+                        <div class="connection-info">
+                            <h3>Customer metrics</h3>
+                            <p>Connect your customer data with ChartMogul (free trial available).</p>
+                        </div>
+                        <button class="connect-btn">Connect</button>
+                    </div>
+                    
+                    <div class="metric-connection">
+                        <div class="connection-info">
+                            <h3>Web traffic</h3>
+                            <p>Connect your web traffic data with Google Analytics.</p>
+                        </div>
+                        <button class="connect-btn">Connect</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 13: Price Justification -->
+            <div class="step-content" id="step13" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How would you justify your asking price to buyers?</h1>
+                
+                <div class="form-group">
+                    <label class="form-label">Enter your asking price reasoning</label>
+                    <textarea class="justification-textarea" placeholder="Based on industry-standard multiples of [X]x EBITDA for businesses in our sector and comparable sales on Caprae.com, our valuation is in line with current market trends." rows="4"></textarea>
+                    <div class="character-count">
+                        <span class="char-used">0</span> (minimum 100, maximum 500)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 14: Website URL -->
+            <div class="step-content" id="step14" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 8C6.34315 8 5 6.65685 5 5C5 3.34315 6.34315 2 8 2C9.65685 2 11 3.34315 11 5C11 6.65685 9.65685 8 8 8Z" fill="#6B7280"/>
+                        <path d="M13 14C13 11.7909 11.2091 10 9 10H7C4.79086 10 3 11.7909 3 14" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is private information</span>
+                </div>
+                
+                <h1 class="step-title">What's your startup's URL?</h1>
+                
+                <div class="form-group">
+                    <label class="form-label">Website</label>
+                    <input type="url" class="url-input" placeholder="hello.com" id="websiteUrl">
+                </div>
+            </div>
+
+            <!-- Step 15: Revenue -->
+            <div class="step-content" id="step15" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How much revenue have you made in the last 12 months?</h1>
+                
+                <div class="form-group">
+                    <label class="form-label">TTM gross revenue</label>
+                    <input type="text" class="revenue-input" placeholder="$5,000,000" id="revenueInput">
+                </div>
+            </div>
+
+            <!-- Step 16: Contact Information -->
+            <div class="step-content" id="step16" style="display: none;">
+                <div class="contact-illustration">
+                    <svg width="200" height="150" viewBox="0 0 200 150" fill="none">
+                        <rect x="50" y="20" width="100" height="80" rx="8" fill="#e0e7ff"/>
+                        <rect x="60" y="30" width="30" height="30" rx="15" fill="#667eea"/>
+                        <rect x="60" y="70" width="80" height="4" rx="2" fill="#cbd5e0"/>
+                        <rect x="60" y="80" width="60" height="4" rx="2" fill="#cbd5e0"/>
+                        <rect x="100" y="30" width="40" height="30" rx="4" fill="#f0f4ff"/>
+                    </svg>
+                </div>
+                
+                <h1 class="step-title">How should we contact you?</h1>
+                <p class="step-subtitle">Since acquisitions are time-sensitive, we might need to call you to discuss your listing or offer quick advice. Buyers will never see this.</p>
+                
+                <div class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <select class="country-select" id="countrySelect">
+                                <option value="us">🇺🇸 United States (+1)</option>
+                                <option value="ca">🇨🇦 Canada (+1)</option>
+                                <option value="uk">🇬🇧 United Kingdom (+44)</option>
+                                <option value="au">🇦🇺 Australia (+61)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone number</label>
+                            <input type="tel" class="phone-input" placeholder="+1 (XXX) XXX-XXXX" id="phoneInput">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 17: SSL Check -->
+            <div class="step-content" id="step17" style="display: none;">
+                <div class="ssl-check-container">
+                    <h1 class="step-title">Checking for SSL certificate...</h1>
+                    
+                    <div class="ssl-progress">
+                        <div class="ssl-icon ssl-checking">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="20" stroke="#667eea" stroke-width="4"/>
+                                <path d="M16 24L20 28L32 16" stroke="#667eea" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="ssl-icon ssl-validating">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect x="12" y="16" width="24" height="24" rx="4" stroke="#667eea" stroke-width="4"/>
+                                <path d="M20 16V12C20 8.68629 22.6863 6 26 6H26C29.3137 6 32 8.68629 32 12V16" stroke="#667eea" stroke-width="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 18: Profit -->
+            <div class="step-content" id="step18" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How much profit have you made in the last 12 months?</h1>
+                
+                <div class="form-group">
+                    <label class="form-label">TTM net profit</label>
+                    <input type="text" class="profit-input" placeholder="$1,000,000" id="profitInput">
+                </div>
+            </div>
+
+            <!-- Step 19: Preview -->
+            <div class="step-content" id="step19" style="display: none;">
+                <h1 class="step-title">Preview your listing</h1>
+                <p class="step-subtitle">You're almost there! See how your completed listing might look after final approval. Note that we might edit your listing to help you sell.</p>
+                
+                <div class="listing-preview">
+                    <div class="preview-card">
+                        <div class="preview-header">
+                            <div class="ai-badge">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 2L8 14M2 8L14 8" stroke="#667eea" stroke-width="2"/>
+                                </svg>
+                                <span>AI</span>
+                            </div>
+                            <button class="view-preview-btn">View preview</button>
+                        </div>
+                        
+                        <div class="preview-content">
+                            <h3 class="preview-title">Secure communication platform for businesses enhancing data privacy and collaboration</h3>
+                            
+                            <div class="preview-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">TTM REVENUE</span>
+                                    <span class="metric-value">$500k</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">TTM PROFIT</span>
+                                    <span class="metric-value">$34k</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">ASKING PRICE</span>
+                                    <span class="metric-value">$1.3M</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 20: Annual Growth Rate -->
+            <div class="step-content" id="step20" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">What is your annual growth rate?</h1>
+                
+                <div class="form-group">
+                    <label for="growth-rate">Annual growth rate</label>
+                    <input type="text" id="growth-rate" name="growth-rate" placeholder="5454%" class="form-input" />
+                </div>
+            </div>
+
+            <!-- Step 21: Launch Date -->
+            <div class="step-content" id="step21" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">When did you launch your startup?</h1>
+                
+                <div class="date-selection">
+                    <div class="form-group">
+                        <label for="launch-month">Month</label>
+                        <select id="launch-month" name="launch-month" class="form-select">
+                            <option value="">Select</option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="launch-year">Year</label>
+                        <select id="launch-year" name="launch-year" class="form-select">
+                            <option value="">Select</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 22: Annual Recurring Revenue -->
+            <div class="step-content" id="step22" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">What is your annual recurring revenue?</h1>
+                
+                <div class="form-group">
+                    <label for="recurring-revenue">Annual recurring revenue</label>
+                    <input type="text" id="recurring-revenue" name="recurring-revenue" placeholder="$4,234,234" class="form-input" />
+                </div>
+            </div>
+
+            <!-- Step 23: Team Size -->
+            <div class="step-content" id="step23" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How big is your team?</h1>
+                <p class="step-subtitle">Include contractors and employees.</p>
+                
+                <div class="team-size-grid">
+                    <div class="team-size-card" data-value="solo">
+                        <div class="team-icon">👤</div>
+                        <h3>Solo founder</h3>
+                        <p>Just me</p>
+                    </div>
+                    <div class="team-size-card" data-value="small">
+                        <div class="team-icon">👥</div>
+                        <h3>Small</h3>
+                        <p>2-20</p>
+                    </div>
+                    <div class="team-size-card" data-value="medium">
+                        <div class="team-icon">👥👥</div>
+                        <h3>Medium</h3>
+                        <p>21-100</p>
+                    </div>
+                    <div class="team-size-card" data-value="large">
+                        <div class="team-icon">🏢</div>
+                        <h3>Large</h3>
+                        <p>101-500</p>
+                    </div>
+                    <div class="team-size-card" data-value="enterprise">
+                        <div class="team-icon">🌐</div>
+                        <h3>Enterprise</h3>
+                        <p>500+</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 24: Active Customers -->
+            <div class="step-content" id="step24" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How many active customers do you have?</h1>
+                
+                <div class="form-group">
+                    <label for="customer-count">Number of customers</label>
+                    <select id="customer-count" name="customer-count" class="form-select">
+                        <option value="">Select</option>
+                        <option value="<10">< 10</option>
+                        <option value="10-50">10-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-250">101-250</option>
+                        <option value="251-500">251-500</option>
+                        <option value="500-999">500-999</option>
+                        <option value="1000-5000">1,000-5,000</option>
+                        <option value="5000+">5,000+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 25: Startup Location -->
+            <div class="step-content" id="step25" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">Where is your startup located?</h1>
+                <p class="step-subtitle">Enter your startup's country of legal jurisdiction.</p>
+                
+                <div class="form-group">
+                    <label for="startup-country">Country</label>
+                    <div class="select-with-search">
+                        <select id="startup-country" name="startup-country" class="form-select">
+                            <option value="">Select</option>
+                            <option value="us">🇺🇸 United States</option>
+                            <option value="uy">🇺🇾 Uruguay</option>
+                            <option value="uz">🇺🇿 Uzbekistan</option>
+                            <option value="vu">🇻🇺 Vanuatu</option>
+                            <option value="ve">🇻🇪 Venezuela</option>
+                            <option value="vn">🇻🇳 Vietnam</option>
+                        </select>
+                        <input type="text" class="country-search form-input" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 26: Churn Rate -->
+            <div class="step-content" id="step26" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">What is your customer churn rate?</h1>
+                
+                <div class="form-group">
+                    <label for="churn-rate">Churn rate</label>
+                    <select id="churn-rate" name="churn-rate" class="form-select">
+                        <option value="1-3%">1-3%</option>
+                        <option value="0-1%">0-1%</option>
+                        <option value="3-5%">3-5%</option>
+                        <option value="5-10%">5-10%</option>
+                        <option value="10%+">10%+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 27: Business Model -->
+            <div class="step-content" id="step27" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">What's your business model?</h1>
+                
+                <div class="business-model-section">
+                    <p class="business-model-label">Choose your business model</p>
+                    <div class="business-model-tags">
+                        <span class="model-tag" data-value="b2c">Business-to-consumer (B2C)</span>
+                        <span class="model-tag" data-value="subscription">Subscription</span>
+                        <span class="model-tag" data-value="p2p">Peer-to-peer</span>
+                        <span class="model-tag" data-value="dtc">Direct-to-consumer</span>
+                    </div>
+                    
+                    <p class="business-model-label">Enter a business model and press enter to add</p>
+                    <input type="text" id="custom-model" placeholder="Business-to-business (B2B)" class="form-input" />
+                    
+                    <div class="additional-details">
+                        <span class="plus-icon">+</span>
+                        <span>Additional details</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 28: Churn Trending -->
+            <div class="step-content" id="step28" style="display: none;">
+                <div class="privacy-indicator">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1L8 15M1 8L15 8" stroke="#6B7280" stroke-width="1.5"/>
+                    </svg>
+                    <span>This is public information</span>
+                </div>
+                
+                <h1 class="step-title">How is your churn rate trending?</h1>
+                
+                <div class="trending-options">
+                    <div class="trending-card" data-value="upwards">
+                        <div class="trend-icon">📈</div>
+                        <h3>Upwards</h3>
+                        <p>Your churn rate is increasing over time.</p>
+                    </div>
+                    <div class="trending-card" data-value="stable">
+                        <div class="trend-icon">📊</div>
+                        <h3>Stable</h3>
+                        <p>Your churn rate is stable over time.</p>
+                    </div>
+                    <div class="trending-card" data-value="downwards">
+                        <div class="trend-icon">📉</div>
+                        <h3>Downwards</h3>
+                        <p>Your churn rate is decreasing over time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 29: The Details Intro -->
+            <div class="step-content" id="step29" style="display: none;">
+                <div class="details-intro">
+                    <div class="details-illustration">
+                        <div class="person-laptop-illustration">
+                            <div class="person">👤</div>
+                            <div class="laptop">
+                                <div class="screen">
+                                    <div class="screen-content">
+                                        <div class="screen-item active"></div>
+                                        <div class="screen-item"></div>
+                                        <div class="screen-item"></div>
+                                        <div class="screen-item"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h1 class="step-title">The details</h1>
+                    <p class="step-subtitle">Give buyers a deeper insight into what makes your startup special.</p>
+                </div>
+            </div>
+
+            <!-- Step 30: Final Preview & Submit -->
+            <div class="step-content" id="step30" style="display: none;">
+                <h1 class="step-title">Your listing is ready to submit!</h1>
+                <p class="step-subtitle">After submitting, our team will review and respond within 24 business hours. <a href="#" class="learn-more-link">Learn more</a></p>
+                
+                <div class="final-preview-card">
+                    <h3>What you get when selling with us</h3>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✓</div>
+                        <div class="benefit-content">
+                            <h4>Maximum interest</h4>
+                            <p>Attract more buyers with marketing and listing support.</p>
+                        </div>
+                        <div class="benefit-highlight">
+                            <div class="fee-percentage">6%</div>
+                            <div class="fee-description">closing fee when you sell</div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-content">
+                            <h4>Expert guidance</h4>
+                            <p>Sell for the highest price and best terms with our help.</p>
+                        </div>
+                        <div class="benefit-highlight">
+                            <div class="listing-fee">Plus $100/mo to list</div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔒</div>
+                        <div class="benefit-content">
+                            <h4>Free and secure escrow</h4>
+                            <p>Close safely and easily with trusted escrow partners.</p>
+                        </div>
+                        <div class="benefit-actions">
+                            <button class="preview-btn">Preview listing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 31: ID Verification -->
+            <div class="step-content" id="step31" style="display: none;">
+                <div class="verification-section">
+                    <div class="verification-illustration">
+                        <div class="verification-graphics">
+                            <div class="shield">🛡️</div>
+                            <div class="id-card">
+                                <div class="profile-pic">👤</div>
+                                <div class="card-details">
+                                    <div class="line"></div>
+                                    <div class="line short"></div>
+                                </div>
+                                <div class="lock">🔒</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h1 class="step-title">Thanks—now let's get you verified</h1>
+                    <p class="step-subtitle">Before we can approve your listing, you need to verify your ID.</p>
+                    <p class="step-subtitle">It only takes a minute, and buyers never see your data. <a href="#" class="learn-more-link">Learn more</a></p>
+                    
+                    <button class="verify-btn">Verify with persona</button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="btn-back" id="backBtn" onclick="previousStep()">Back</button>
+                <button class="btn-next" id="nextBtn" onclick="nextStep()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="seller-onboarding-script.js"></script>
+</body>
+</html>

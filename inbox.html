@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox - Caprae Capital</title>
+    <link rel="stylesheet" href="inbox-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="inbox-header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                        <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="browse-listings.html" class="nav-link">Listings</a>
+                <a href="#" class="nav-link">My deals</a>
+                <a href="inbox.html" class="nav-link active">Inbox</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="user-avatars">
+                    <div class="avatar-small" style="background: #6366f1;"></div>
+                    <div class="avatar-small" style="background: #10b981;"></div>
+                    <div class="avatar-small" style="background: #f59e0b;"></div>
+                </div>
+                <span class="help-text">Need help?</span>
+                <button class="upgrade-btn">Upgrade</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="inbox-main">
+        <div class="inbox-container">
+            <!-- Sidebar with conversation list -->
+            <div class="inbox-sidebar">
+                <div class="inbox-tabs">
+                    <button class="tab-btn active" data-tab="messages">Messages</button>
+                    <button class="tab-btn" data-tab="notifications">Notifications</button>
+                </div>
+                
+                <div class="conversations-list">
+                    <div class="conversation-item">
+                        <div class="conversation-avatar">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiM2MzY2ZjEiLz4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJJbnRlciIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+U0I8L3RleHQ+Cjwvc3ZnPg==" alt="SB">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-name">Sarah's Business</div>
+                            <div class="conversation-preview">Hi! I'm interested in discussing...</div>
+                        </div>
+                        <div class="conversation-meta">
+                            <div class="conversation-time">2h</div>
+                            <div class="conversation-badge">2</div>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-item">
+                        <div class="conversation-avatar">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMxMGI5ODEiLz4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJJbnRlciIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+VEc8L3RleHQ+Cjwvc3ZnPg==" alt="TG">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-name">TechGrow Inc.</div>
+                            <div class="conversation-preview">Thanks for reaching out. When would...</div>
+                        </div>
+                        <div class="conversation-meta">
+                            <div class="conversation-time">1d</div>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-item">
+                        <div class="conversation-avatar">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiNmNTllMGIiLz4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJJbnRlciIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+REw8L3RleHQ+Cjwvc3ZnPg==" alt="DL">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-name">Digital Labs</div>
+                            <div class="conversation-preview">I'd like to schedule a call to discuss...</div>
+                        </div>
+                        <div class="conversation-meta">
+                            <div class="conversation-time">3d</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <p class="empty-state-text">Your conversations will appear here</p>
+                </div>
+            </div>
+
+            <!-- Main chat area -->
+            <div class="chat-area">
+                <div class="empty-state">
+                    <div class="empty-state-illustration">
+                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Illustration of person with chat bubble -->
+                            <circle cx="100" cy="80" r="20" fill="#cbd5e1"/>
+                            <rect x="85" y="100" width="30" height="60" rx="15" fill="#cbd5e1"/>
+                            <rect x="70" y="115" width="15" height="30" rx="7" fill="#cbd5e1"/>
+                            <rect x="115" y="115" width="15" height="30" rx="7" fill="#cbd5e1"/>
+                            <circle cx="95" cy="75" r="2" fill="#64748b"/>
+                            <circle cx="105" cy="75" r="2" fill="#64748b"/>
+                            <path d="M95 85 Q100 90 105 85" stroke="#64748b" stroke-width="2" fill="none"/>
+                            
+                            <!-- Chat bubble -->
+                            <rect x="40" y="45" width="40" height="25" rx="12" fill="#6366f1"/>
+                            <path d="M65 70 L70 75 L75 70" fill="#6366f1"/>
+                            <circle cx="50" cy="52" r="1.5" fill="white"/>
+                            <circle cx="55" cy="52" r="1.5" fill="white"/>
+                            <circle cx="60" cy="52" r="1.5" fill="white"/>
+                            <rect x="45" y="58" width="25" height="2" rx="1" fill="white"/>
+                            <rect x="45" y="62" width="20" height="2" rx="1" fill="white"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="empty-state-content">
+                        <h2>Upgrade your account to request startup access and chat with sellers</h2>
+                        <p>You need a Premium account or higher to chat with sellers.</p>
+                        
+                        <button class="upgrade-cta-btn">
+                            <span>Learn more and join</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat details sidebar -->
+            <div class="chat-details">
+                <div class="details-content">
+                    <p class="details-placeholder">Chat details will appear here</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.4 0-2.73-.35-3.89-.98L3 20l.98-5.11C3.35 13.73 3 12.4 3 11c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/>
+                <circle cx="9" cy="12" r="1"/>
+                <circle cx="12" cy="12" r="1"/>
+                <circle cx="15" cy="12" r="1"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="inbox-script.js"></script>
+</body>
+</html>

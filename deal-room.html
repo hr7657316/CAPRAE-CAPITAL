@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deal Room - Caprae Capital</title>
+    <link rel="stylesheet" href="deal-room-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                        <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            <nav class="nav-links">
+                <a href="browse-listings.html">Browse</a>
+                <a href="inbox.html">Messages</a>
+                <a href="#" class="active">Deal Room</a>
+                <a href="#">Profile</a>
+            </nav>
+            <div class="nav-buttons">
+                <div class="user-avatar">
+                    <span>SB</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Deal Header -->
+            <div class="deal-header">
+                <div class="deal-info">
+                    <div class="deal-participants">
+                        <div class="participant seller">
+                            <div class="participant-avatar">
+                                <span>SB</span>
+                            </div>
+                            <div class="participant-details">
+                                <h3>Sarah's SaaS Business</h3>
+                                <p>Seller</p>
+                            </div>
+                        </div>
+                        <div class="connection-line">
+                            <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+                                <path d="M0 10H40M35 5L40 10L35 15" stroke="#667eea" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="participant buyer">
+                            <div class="participant-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="John Doe">
+                            </div>
+                            <div class="participant-details">
+                                <h3>John Doe</h3>
+                                <p>TechVentures</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-status">
+                        <div class="status-badge due-diligence">
+                            <span class="status-indicator"></span>
+                            <span>Due Diligence</span>
+                        </div>
+                        <div class="deal-value">$3.2M Target</div>
+                    </div>
+                </div>
+                
+                <div class="deal-actions">
+                    <button class="btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>Invite Advisor</span>
+                    </button>
+                    <button class="btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>Schedule Meeting</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Deal Progress -->
+            <div class="deal-progress">
+                <div class="progress-header">
+                    <h2>Deal Pipeline</h2>
+                    <div class="estimated-completion">
+                        <span class="completion-label">Estimated Completion:</span>
+                        <span class="completion-date">March 15, 2025</span>
+                    </div>
+                </div>
+                
+                <div class="progress-timeline">
+                    <div class="timeline-step completed">
+                        <div class="step-marker">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8L6 11L13 4" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h4>Initial Match</h4>
+                            <p>Both parties connected</p>
+                            <span class="step-date">Jan 15, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step completed">
+                        <div class="step-marker">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8L6 11L13 4" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h4>NDA Signed</h4>
+                            <p>Confidentiality agreement executed</p>
+                            <span class="step-date">Jan 22, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step active">
+                        <div class="step-marker">
+                            <div class="step-progress">
+                                <svg width="20" height="20" viewBox="0 0 20 20">
+                                    <circle cx="10" cy="10" r="8" stroke="#e2e8f0" stroke-width="2" fill="none"/>
+                                    <circle cx="10" cy="10" r="8" stroke="#667eea" stroke-width="2" fill="none"
+                                            stroke-dasharray="50.26" stroke-dashoffset="15.08"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h4>Due Diligence</h4>
+                            <p>Document review and verification</p>
+                            <span class="step-date">In Progress (70% complete)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step pending">
+                        <div class="step-marker">
+                            <span class="step-number">4</span>
+                        </div>
+                        <div class="step-content">
+                            <h4>Valuation</h4>
+                            <p>Business valuation and pricing</p>
+                            <span class="step-date">Pending</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step pending">
+                        <div class="step-marker">
+                            <span class="step-number">5</span>
+                        </div>
+                        <div class="step-content">
+                            <h4>Final Terms</h4>
+                            <p>Negotiate and finalize agreement</p>
+                            <span class="step-date">Pending</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step pending">
+                        <div class="step-marker">
+                            <span class="step-number">6</span>
+                        </div>
+                        <div class="step-content">
+                            <h4>Closing</h4>
+                            <p>Execute transaction</p>
+                            <span class="step-date">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- AI Assistant -->
+                    <div class="ai-assistant-card">
+                        <div class="ai-header">
+                            <div class="ai-icon">
+                                <span class="ai-logo">🤖</span>
+                            </div>
+                            <div class="ai-info">
+                                <h3>AI Deal Assistant</h3>
+                                <p>Real-time analysis and recommendations</p>
+                            </div>
+                            <div class="ai-status online">
+                                <span class="status-dot"></span>
+                                <span>Active</span>
+                            </div>
+                        </div>
+                        
+                            <div class="ai-insights">
+                            <div class="insight-item priority">
+                                <div class="insight-icon">⚠️</div>
+                                <div class="insight-content">
+                                    <h4>Action Required</h4>
+                                    <p>Customer concentration analysis shows 40% revenue from top 3 clients. Recommend requesting customer diversification plan.</p>
+                                    <button class="insight-action">Review Details</button>
+                                </div>
+                            </div>
+                            
+                            <div class="insight-item positive">
+                                <div class="insight-icon">✅</div>
+                                <div class="insight-content">
+                                    <h4>Strong Financials</h4>
+                                    <p>Revenue growth trajectory exceeds industry average by 23%. Profit margins are healthy at 28%.</p>
+                                    <button class="insight-action">View Analysis</button>
+                                </div>
+                            </div>
+                            
+                            <div class="insight-item suggestion">
+                                <div class="insight-icon">💡</div>
+                                <div class="insight-content">
+                                    <h4>Negotiation Tip</h4>
+                                    <p>Similar SaaS acquisitions in this space averaged 4.2x revenue multiple. Consider using this as benchmark.</p>
+                                    <button class="insight-action">See Comparables</button>
+                                </div>
+                            </div>
+                            
+                            <div class="insight-item info">
+                                <div class="insight-icon">🤖</div>
+                                <div class="insight-content">
+                                    <h4>Powered by Gemini AI</h4>
+                                    <p>Advanced analysis using Google's Gemini AI model for real-time insights and recommendations.</p>
+                                    <button class="insight-action">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-chat">
+                            <div class="chat-header">
+                                <span>Ask the AI Assistant</span>
+                            </div>
+                            <div class="chat-input-container">
+                                <input type="text" placeholder="Ask about the deal, valuations, market comps..." class="chat-input">
+                                <button class="chat-send">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M1 8L15 1L11 15L8 10L1 8Z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="ai-powered-by">
+                                <small>🤖 Powered by Google Gemini AI</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Analysis -->
+                    <div class="document-analysis">
+                        <div class="section-header">
+                            <h3>Document Analysis</h3>
+                            <button class="btn-upload">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 1V11M4 7L8 3L12 7M2 13H14" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Upload Document
+                            </button>
+                        </div>
+                        
+                        <div class="document-list">
+                            <div class="document-item analyzed">
+                                <div class="doc-icon">📊</div>
+                                <div class="doc-info">
+                                    <h4>Financial_Statements_2024.pdf</h4>
+                                    <p>2.3 MB • Uploaded 2 hours ago</p>
+                                </div>
+                                <div class="doc-status">
+                                    <span class="status-badge analyzed">AI Analyzed</span>
+                                </div>
+                                <div class="doc-actions">
+                                    <button class="doc-action">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="document-summary">
+                                <div class="summary-header">
+                                    <span class="ai-badge">🤖 AI Analysis by Gemini</span>
+                                    <span class="confidence-score">94% Confidence</span>
+                                </div>
+                                <div class="summary-content">
+                                    <div class="key-metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Revenue (2024)</span>
+                                            <span class="metric-value">$2.34M</span>
+                                            <span class="metric-change positive">+34%</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Gross Margin</span>
+                                            <span class="metric-value">78%</span>
+                                            <span class="metric-change positive">+2%</span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Net Profit</span>
+                                            <span class="metric-value">$654K</span>
+                                            <span class="metric-change positive">+42%</span>
+                                        </div>
+                                    </div>
+                                    <div class="risk-factors">
+                                        <h5>⚠️ Risk Factors:</h5>
+                                        <ul>
+                                            <li>High customer concentration (Top 3 = 40%)</li>
+                                            <li>Seasonal revenue pattern in Q4</li>
+                                        </ul>
+                                    </div>
+                                    <div class="opportunities">
+                                        <h5>🚀 Growth Opportunities:</h5>
+                                        <ul>
+                                            <li>Strong recurring revenue growth (+45% YoY)</li>
+                                            <li>Low churn rate (2.3% monthly)</li>
+                                            <li>Untapped enterprise market</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="document-item processing">
+                                <div class="doc-icon">📄</div>
+                                <div class="doc-info">
+                                    <h4>Customer_Contracts_2024.zip</h4>
+                                    <p>45.2 MB • Uploaded 30 minutes ago</p>
+                                </div>
+                                <div class="doc-status">
+                                    <span class="status-badge processing">
+                                        <div class="processing-spinner"></div>
+                                        Processing...
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="document-item pending">
+                                <div class="doc-icon">🏛️</div>
+                                <div class="doc-info">
+                                    <h4>Legal_Documents.pdf</h4>
+                                    <p>1.8 MB • Uploaded 1 hour ago</p>
+                                </div>
+                                <div class="doc-status">
+                                    <span class="status-badge pending">Pending Review</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="actions-grid">
+                            <button class="action-card">
+                                <div class="action-icon">📅</div>
+                                <span>Schedule Call</span>
+                            </button>
+                            <button class="action-card">
+                                <div class="action-icon">📋</div>
+                                <span>Request Info</span>
+                            </button>
+                            <button class="action-card">
+                                <div class="action-icon">💬</div>
+                                <span>Send Message</span>
+                            </button>
+                            <button class="action-card">
+                                <div class="action-icon">📊</div>
+                                <span>Generate Report</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Deal Checklist -->
+                    <div class="deal-checklist">
+                        <div class="checklist-header">
+                            <h3>Due Diligence Checklist</h3>
+                            <div class="checklist-progress">
+                                <span class="progress-text">7 of 12 completed</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 58%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="checklist-items">
+                            <div class="checklist-item completed">
+                                <div class="item-checkbox">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6L4.5 8.5L10 3" stroke="white" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <div class="item-content">
+                                    <span class="item-title">Financial Statements</span>
+                                    <span class="item-status">✅ Verified</span>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-item completed">
+                                <div class="item-checkbox">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6L4.5 8.5L10 3" stroke="white" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <div class="item-content">
+                                    <span class="item-title">Tax Returns</span>
+                                    <span class="item-status">✅ Verified</span>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-item completed">
+                                <div class="item-checkbox">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6L4.5 8.5L10 3" stroke="white" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <div class="item-content">
+                                    <span class="item-title">Customer Analysis</span>
+                                    <span class="item-status">✅ Complete</span>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-item in-progress">
+                                <div class="item-checkbox">
+                                    <div class="progress-spinner"></div>
+                                </div>
+                                <div class="item-content">
+                                    <span class="item-title">Legal Review</span>
+                                    <span class="item-status">🔄 In Progress</span>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-item pending">
+                                <div class="item-checkbox"></div>
+                                <div class="item-content">
+                                    <span class="item-title">IP Assessment</span>
+                                    <span class="item-status">⏳ Pending</span>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-item pending">
+                                <div class="item-checkbox"></div>
+                                <div class="item-content">
+                                    <span class="item-title">Team Interviews</span>
+                                    <span class="item-status">⏳ Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span>🤖</span>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>AI Assistant</strong> analyzed financial statements</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="John">
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>John Doe</strong> requested additional customer data</p>
+                                    <span class="activity-time">4 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span>SB</span>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>You</strong> uploaded customer contracts</p>
+                                    <span class="activity-time">6 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span>📋</span>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>System</strong> completed tax return verification</p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="gemini-ai-service.js"></script>
+    <script src="deal-room-script.js"></script>
+</body>
+</html>

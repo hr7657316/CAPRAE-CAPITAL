@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Startup - Caprae Capital</title>
+    <link rel="stylesheet" href="listing-detail-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="detail-header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="back-btn" onclick="history.back()">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                    </svg>
+                </button>
+                
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                            <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">caprae capital</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="browse-listings.html" class="nav-link">Listings</a>
+                <a href="#" class="nav-link">My deals</a>
+                <a href="inbox.html" class="nav-link">Inbox</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="action-btn share-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+                    </svg>
+                </button>
+                <button class="action-btn bookmark-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+                    </svg>
+                </button>
+                <button class="action-btn favorite-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
+                
+                <div class="user-avatars">
+                    <div class="avatar-small" style="background: #6366f1;"></div>
+                    <div class="avatar-small" style="background: #10b981;"></div>
+                    <div class="avatar-small" style="background: #f59e0b;"></div>
+                </div>
+                <span class="help-text">Need help?</span>
+                <button class="upgrade-btn">Upgrade</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="listing-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="business-header">
+                    <div class="business-type">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>SaaS Startup</span>
+                    </div>
+                    <div class="business-location">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <span>United States (California)</span>
+                    </div>
+                </div>
+                
+                <button class="unlock-name-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                    Upgrade to unlock startup name
+                </button>
+                
+                <h1 class="business-title">Venture Backed Cold Email SaaS with AI-Powered Campaigns and Smart Inbox Management</h1>
+                
+                <div class="verification-badges">
+                    <div class="badge verified">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/>
+                        </svg>
+                        Recast financials
+                    </div>
+                    <div class="badge verified">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h7l5-5V4c0-1.1-.9-2-2-2zm4 15h-4v4l4-4z"/>
+                        </svg>
+                        P&L Documents (2)
+                    </div>
+                    <div class="badge verified">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h7l5-5V4c0-1.1-.9-2-2-2zm4 15h-4v4l4-4z"/>
+                        </svg>
+                        Supporting files (2)
+                    </div>
+                    <div class="badge verified">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Under M&A advisory
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-metrics">
+                <div class="metrics-row">
+                    <div class="metric-card primary">
+                        <div class="metric-label">ASKING PRICE</div>
+                        <div class="metric-value">$552k</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">MULTIPLES</div>
+                        <div class="metric-value">3.6x profit 1.1x revenue</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">ANNUAL GROWTH RATE</div>
+                        <div class="metric-value">100%</div>
+                    </div>
+                </div>
+                
+                <div class="metrics-row">
+                    <div class="metric-card">
+                        <div class="metric-label">TTM REVENUE</div>
+                        <div class="metric-value">$495.4k</div>
+                        <div class="metric-bar">
+                            <div class="metric-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">PROFIT</div>
+                        <div class="metric-value">$154.7k</div>
+                        <div class="metric-bar">
+                            <div class="metric-progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metrics-row">
+                    <div class="metric-card">
+                        <div class="metric-label">LAST MONTHS REVENUE</div>
+                        <div class="metric-value">$19.5k</div>
+                        <div class="metric-bar small">
+                            <div class="metric-progress" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">PROFIT</div>
+                        <div class="metric-value">$5.9k</div>
+                        <div class="metric-bar small">
+                            <div class="metric-progress" style="width: 35%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="upgrade-overlay">
+            <div class="upgrade-content">
+                <div class="lock-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                </div>
+                <h3>Upgrade to Platinum to request access to this startup</h3>
+                <p>Chat with the founder and access exclusive data unavailable to the public.</p>
+                <button class="upgrade-cta">
+                    Learn more and join
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Tabs -->
+    <section class="detail-tabs">
+        <div class="container">
+            <nav class="tab-nav">
+                <button class="tab-btn active" data-tab="summary">Summary</button>
+                <button class="tab-btn" data-tab="metrics">Metrics</button>
+                <button class="tab-btn" data-tab="details">Details</button>
+            </nav>
+            
+            <div class="tab-content">
+                <!-- Summary Tab -->
+                <div class="tab-panel active" id="summary">
+                    <div class="content-layout">
+                        <div class="main-content">
+                            <div class="content-section">
+                                <div class="business-info">
+                                    <div class="business-type-badge">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
+                                        SaaS startup
+                                    </div>
+                                    <div class="location-badge">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                        </svg>
+                                        United States (California)
+                                    </div>
+                                </div>
+                                
+                                <h2>SEO automation tool for businesses to boost web traffic with AI-driven backlinks from Featured/HARO.</h2>
+                                
+                                <div class="description">
+                                    <p>This business is an SEO automation platform designed to help businesses enhance their online visibility by generating high-quality outreach backlinks on autopilot. It automates the process of gathering reporter quote...</p>
+                                    <button class="see-more-btn">
+                                        See more
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="price-section">
+                                    <div class="price-item">
+                                        <div class="price-label">ASKING PRICE</div>
+                                        <div class="price-value">$798.7k</div>
+                                    </div>
+                                    <div class="price-item">
+                                        <div class="price-label">MULTIPLES</div>
+                                        <div class="price-value">5.2x profit 3.5x revenue</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="price-reasoning">
+                                    <h3>ASKING PRICE REASONING</h3>
+                                    <p>This business is a fully automated AI SaaS for SEO with $227K past 12-mo revenue, $160K ARR, 187% YoY growth, and 10% churn. Includes custom AI IP with trained models, premium domain, 50+ active customers, 100+ past...</p>
+                                    <button class="see-more-btn">
+                                        See more
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="performance-section">
+                                    <h3>Recent performance</h3>
+                                    <div class="performance-metrics">
+                                        <div class="performance-item">
+                                            <div class="performance-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="performance-data">
+                                                <div class="performance-label">TTM REVENUE</div>
+                                                <div class="performance-value">$227k</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="performance-item">
+                                            <div class="performance-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="performance-data">
+                                                <div class="performance-label">TTM PROFIT</div>
+                                                <div class="performance-value">$154k</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="performance-item">
+                                            <div class="performance-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="performance-data">
+                                                <div class="performance-label">LAST MONTHS REVENUE</div>
+                                                <div class="performance-value">$19k</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="performance-item">
+                                            <div class="performance-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="performance-data">
+                                                <div class="performance-label">LAST MONTHS PROFIT</div>
+                                                <div class="performance-value">$8k</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar">
+                            <div class="sidebar-section">
+                                <h3>Seller details</h3>
+                                <div class="locked-content">
+                                    <div class="lock-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-section">
+                                <h3>Startup details</h3>
+                                <div class="locked-content">
+                                    <div class="lock-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-section">
+                                <h3>Data room</h3>
+                                <div class="locked-content">
+                                    <div class="lock-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="attention-widget">
+                                <div class="widget-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="widget-text">
+                                    <strong>Grabbing a lot of attention.</strong>
+                                    <div>128 buyers have viewed this listing.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Metrics Tab -->
+                <div class="tab-panel" id="metrics">
+                    <div class="content-layout">
+                        <div class="main-content">
+                            <div class="metrics-overview">
+                                <div class="performance-metrics">
+                                    <div class="performance-item">
+                                        <div class="performance-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="performance-data">
+                                            <div class="performance-label">TTM REVENUE</div>
+                                            <div class="performance-value">$227k</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="performance-item">
+                                        <div class="performance-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="performance-data">
+                                            <div class="performance-label">TTM PROFIT</div>
+                                            <div class="performance-value">$154k</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="performance-item">
+                                        <div class="performance-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="performance-data">
+                                            <div class="performance-label">LAST MONTHS REVENUE</div>
+                                            <div class="performance-value">$19k</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="performance-item">
+                                        <div class="performance-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="performance-data">
+                                            <div class="performance-label">LAST MONTHS PROFIT</div>
+                                            <div class="performance-value">$8k</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="customer-metrics">
+                                    <h3>Customer metrics</h3>
+                                    <div class="customer-grid">
+                                        <div class="customer-metric">
+                                            <div class="metric-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.5 2.5 0 0017.5 7H16c-.8 0-1.56.31-2.12.88l-4.5 4.5A2.5 2.5 0 007.5 15H6v-2.5c0-.83.67-1.5 1.5-1.5h1.8l1.75-1.75A3.5 3.5 0 0013.5 8.5h3.75l2.06 6.17L22 16.5V22h-2zm-8-2H2v-3c0-3.87 3.13-7 7-7s7 3.13 7 7v3z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="metric-info">
+                                                <div class="metric-label">CUSTOMERS</div>
+                                                <div class="metric-value">51-100</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="customer-metric">
+                                            <div class="metric-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="metric-info">
+                                                <div class="metric-label">ANNUAL RECURRING REVENUE</div>
+                                                <div class="metric-value">$158k</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="customer-metric">
+                                            <div class="metric-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="metric-info">
+                                                <div class="metric-label">ANNUAL GROWTH RATE</div>
+                                                <div class="metric-value">187%</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="customer-metric">
+                                            <div class="metric-icon">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="metric-info">
+                                                <div class="metric-label">CHURN RATE</div>
+                                                <div class="metric-value">5-10% Stable</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="traffic-analytics">
+                                    <h3>Web traffic by <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDIwQzE1LjUyMjggMjAgMjAgMTUuNTIyOCAyMCAxMEMyMCA0LjQ3NzE1IDE1LjUyMjggMCAxMCAwQzQuNDc3MTUgMCAwIDQuNDc3MTUgMCAxMEMwIDE1LjUyMjggNC40NzcxNSAyMCAxMCAyMFoiIGZpbGw9IiNGQkJDMDQiLz4KPHBhdGggZD0iTTEwIDIwQzE1LjUyMjggMjAgMjAgMTUuNTIyOCAyMCAxMEMyMCA0LjQ3NzE1IDE1LjUyMjggMCAxMCAwQzQuNDc3MTUgMCAwIDQuNDc3MTUgMCAxMEMwIDE1LjUyMjggNC40NzcxNSAyMCAxMCAyMFoiIGZpbGw9IiMzNEE4NTMiLz4KPHBhdGggZD0iTTEwIDIwQzE1LjUyMjggMjAgMjAgMTUuNTIyOCAyMCAxMEMyMCA0LjQ3NzE1IDE1LjUyMjggMCAxMCAwQzQuNDc3MTUgMCAwIDQuNDc3MTUgMCAxMEMwIDE1LjUyMjggNC40NzcxNSAyMCAxMCAyMFoiIGZpbGw9IiNFQTQzMzUiLz4KPHBhdGggZD0iTTEwIDIwQzE1LjUyMjggMjAgMjAgMTUuNTIyOCAyMCAxMEMyMCA0LjQ3NzE1IDE1LjUyMjggMCAxMCAwQzQuNDc3MTUgMCAwIDQuNDc3MTUgMCAxMEMwIDE1LjUyMjggNC40NzcxNSAyMCAxMCAyMFoiIGZpbGw9IiM0Mjg1RjQiLz4KPC9zdmc+" alt="Google Analytics"> Google Analytics</h3>
+                                    <div class="analytics-note">Last updated 6 days ago</div>
+                                    <div class="analytics-placeholder">
+                                        <div class="lock-icon">
+                                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar">
+                            <div class="attention-widget">
+                                <div class="widget-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="widget-text">
+                                    <strong>Grabbing a lot of attention.</strong>
+                                    <div>128 buyers have viewed this listing.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Details Tab -->
+                <div class="tab-panel" id="details">
+                    <div class="content-layout">
+                        <div class="main-content">
+                            <div class="company-overview">
+                                <h3>Company overview</h3>
+                                
+                                <div class="overview-grid">
+                                    <div class="overview-item">
+                                        <div class="overview-label">DATE FOUNDED</div>
+                                        <div class="overview-value">Aug 2023</div>
+                                    </div>
+                                    <div class="overview-item">
+                                        <div class="overview-label">TEAM SIZE</div>
+                                        <div class="overview-value">2-20</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="business-model">
+                                    <h4>BUSINESS MODEL</h4>
+                                    <ul class="model-list">
+                                        <li>
+                                            <span class="model-bullet">•</span>
+                                            Subscription
+                                        </li>
+                                        <li>
+                                            <span class="model-bullet">•</span>
+                                            Business-to-business (B2B)
+                                        </li>
+                                        <li>
+                                            <span class="model-bullet">•</span>
+                                            Agency-based
+                                        </li>
+                                    </ul>
+                                    <p>AI B2B SaaS For Search Engine Optimization.</p>
+                                </div>
+                                
+                                <div class="tech-stack">
+                                    <h4>TECH STACK</h4>
+                                    <ul class="tech-list">
+                                        <li><span class="tech-bullet">•</span> Vercel</li>
+                                        <li><span class="tech-bullet">•</span> Digital Ocean</li>
+                                        <li><span class="tech-bullet">•</span> Python</li>
+                                        <li><span class="tech-bullet">•</span> Stripe</li>
+                                        <li><span class="tech-bullet">•</span> React Native</li>
+                                        <li><span class="tech-bullet">•</span> Firebase</li>
+                                        <li><span class="tech-bullet">•</span> TypeScript</li>
+                                        <li><span class="tech-bullet">•</span> OpenAI</li>
+                                        <li><span class="tech-bullet">•</span> PostgreSQL</li>
+                                        <li><span class="tech-bullet">•</span> React</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar">
+                            <div class="attention-widget">
+                                <div class="widget-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="widget-text">
+                                    <strong>Grabbing a lot of attention.</strong>
+                                    <div>128 buyers have viewed this listing.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-cta">
+                <button class="upgrade-btn-large">
+                    Upgrade to request access
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.4 0-2.73-.35-3.89-.98L3 20l.98-5.11C3.35 13.73 3 12.4 3 11c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/>
+                <circle cx="9" cy="12" r="1"/>
+                <circle cx="12" cy="12" r="1"/>
+                <circle cx="15" cy="12" r="1"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="listing-detail-script.js"></script>
+</body>
+</html>

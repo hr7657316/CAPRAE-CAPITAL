@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Onboarding - Caprae Capital</title>
+    <link rel="stylesheet" href="onboarding-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="onboarding-header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                        <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            <button class="exit-btn" onclick="window.location.href='index.html'">Exit</button>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="onboarding-main">
+        <!-- Step 1: How did you hear about us? -->
+        <div class="step-container active" id="step1">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()" style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">How did you hear about us?</h1>
+                        
+                        <div class="options-grid single-column">
+                            <button class="option-card" data-value="youtube">
+                                <span>YouTube</span>
+                            </button>
+                            <button class="option-card" data-value="google">
+                                <span>Google search</span>
+                            </button>
+                            <button class="option-card" data-value="ai">
+                                <span>AI (ChatGPT, Gemini, etc.)</span>
+                            </button>
+                            <button class="option-card" data-value="referral">
+                                <span>Personal referral</span>
+                            </button>
+                            <button class="option-card" data-value="social">
+                                <span>Social media</span>
+                            </button>
+                            <button class="option-card" data-value="andrew">
+                                <span>Andrew Gazdecki</span>
+                            </button>
+                            <button class="option-card" data-value="other">
+                                <span>Other</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="next-btn disabled" onclick="nextStep()" disabled>Next</button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <div class="illustration">
+                        <svg viewBox="0 0 400 300" class="illustration-svg">
+                            <!-- Person with laptop illustration -->
+                            <g class="person-illustration">
+                                <!-- Background shape -->
+                                <rect x="50" y="80" width="150" height="120" rx="20" fill="#6366f1" opacity="0.8"/>
+                                
+                                <!-- Person -->
+                                <circle cx="275" cy="120" r="25" fill="#f1f5f9"/>
+                                <rect x="250" y="145" width="50" height="80" rx="25" fill="#f1f5f9"/>
+                                <rect x="240" y="180" width="20" height="45" rx="10" fill="#f1f5f9"/>
+                                <rect x="280" y="180" width="20" height="45" rx="10" fill="#f1f5f9"/>
+                                
+                                <!-- Floating icons -->
+                                <g class="floating-icons">
+                                    <rect x="320" y="60" width="40" height="30" rx="8" fill="white" opacity="0.9"/>
+                                    <path d="M335 70l5 5 5-5" stroke="#6366f1" stroke-width="2" fill="none"/>
+                                    
+                                    <circle cx="340" cy="160" r="20" fill="white" opacity="0.9"/>
+                                    <circle cx="340" cy="160" r="8" fill="#6366f1"/>
+                                    
+                                    <rect x="310" y="200" width="35" height="25" rx="6" fill="white" opacity="0.9"/>
+                                    <rect x="315" y="205" width="25" height="3" rx="1" fill="#6366f1"/>
+                                    <rect x="315" y="210" width="20" height="3" rx="1" fill="#6366f1"/>
+                                    <rect x="315" y="215" width="15" height="3" rx="1" fill="#6366f1"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Which startup types interest you? -->
+        <div class="step-container" id="step2">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">Which startup types interest you?</h1>
+                        
+                        <div class="options-grid four-column">
+                            <button class="option-card icon-card" data-value="saas">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <span>SaaS</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="mobile">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                                    </svg>
+                                </div>
+                                <span>Mobile app</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="ai">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                    </svg>
+                                </div>
+                                <span>AI</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="content">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                    </svg>
+                                </div>
+                                <span>Content</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="agency">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-6h2v6H4zm12.5-11c1.38 0 2.5 1.12 2.5 2.5 0 .69-.28 1.31-.73 1.76L12 17.5 5.73 11.26C5.28 10.81 5 10.19 5 9.5 5 8.12 6.12 7 7.5 7S10 8.12 10 9.5c0 .69-.28 1.31-.73 1.76L12 14l2.77-2.76c-.45-.45-.77-1.07-.77-1.76C14 8.12 15.12 7 16.5 7z"/>
+                                    </svg>
+                                </div>
+                                <span>Agency</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="marketplace">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span>Marketplace</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="shopify">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                                    </svg>
+                                </div>
+                                <span>Newsletter</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="ecommerce">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                                    </svg>
+                                </div>
+                                <span>Ecommerce</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="crypto">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
+                                    </svg>
+                                </div>
+                                <span>Crypto</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="digital">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                                    </svg>
+                                </div>
+                                <span>Digital</span>
+                            </button>
+                            <button class="option-card icon-card" data-value="other">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                                    </svg>
+                                </div>
+                                <span>Other</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="next-btn disabled" onclick="nextStep()" disabled>Next</button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Price Range -->
+        <div class="step-container" id="step3">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">What is your ideal asking price range?</h1>
+                        
+                        <div class="chart-container">
+                            <div class="histogram" id="priceHistogram">
+                                <!-- Bars will be generated by JavaScript -->
+                            </div>
+                            <div class="chart-labels">
+                                <span>Min</span>
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="range-inputs">
+                            <div class="input-group">
+                                <input type="text" id="minPrice" placeholder="$0" class="range-input">
+                            </div>
+                            <span class="range-separator">—</span>
+                            <div class="input-group">
+                                <input type="text" id="maxPrice" placeholder="$2,000,000+" class="range-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="next-btn" onclick="nextStep()">Next <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Revenue Multiple Range -->
+        <div class="step-container" id="step4">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">What is your ideal revenue multiple range?</h1>
+                        
+                        <div class="chart-container">
+                            <div class="histogram" id="revenueHistogram">
+                                <!-- Bars will be generated by JavaScript -->
+                            </div>
+                            <div class="chart-labels">
+                                <span>Min</span>
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="range-inputs">
+                            <div class="input-group">
+                                <input type="text" id="minRevenue" placeholder="0x" class="range-input">
+                            </div>
+                            <span class="range-separator">—</span>
+                            <div class="input-group">
+                                <input type="text" id="maxRevenue" placeholder="20x+" class="range-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="next-btn" onclick="nextStep()">Next <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Profit Multiple Range -->
+        <div class="step-container" id="step5">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">What is your ideal profit multiple range?</h1>
+                        
+                        <div class="chart-container">
+                            <div class="histogram" id="profitHistogram">
+                                <!-- Bars will be generated by JavaScript -->
+                            </div>
+                            <div class="chart-labels">
+                                <span>Min</span>
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="range-inputs">
+                            <div class="input-group">
+                                <input type="text" id="minProfit" placeholder="0x" class="range-input">
+                            </div>
+                            <span class="range-separator">—</span>
+                            <div class="input-group">
+                                <input type="text" id="maxProfit" placeholder="20x+" class="range-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="next-btn" onclick="nextStep()">Next <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 6: TTM Revenue Range -->
+        <div class="step-container" id="step6">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">What is your ideal trailing twelve-month (TTM) revenue range?</h1>
+                        
+                        <div class="chart-container">
+                            <div class="histogram" id="ttmRevenueHistogram">
+                                <!-- Bars will be generated by JavaScript -->
+                            </div>
+                            <div class="chart-labels">
+                                <span>Min</span>
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="range-inputs">
+                            <div class="input-group">
+                                <input type="text" id="minTTMRevenue" placeholder="$0" class="range-input">
+                            </div>
+                            <span class="range-separator">—</span>
+                            <div class="input-group">
+                                <input type="text" id="maxTTMRevenue" placeholder="$1,000,000+" class="range-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="next-btn" onclick="nextStep()">Next <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 7: TTM Profit Range -->
+        <div class="step-container" id="step7">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">What is your ideal trailing twelve-month (TTM) profit range?</h1>
+                        
+                        <div class="chart-container">
+                            <div class="histogram" id="ttmProfitHistogram">
+                                <!-- Bars will be generated by JavaScript -->
+                            </div>
+                            <div class="chart-labels">
+                                <span>Min</span>
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="range-inputs">
+                            <div class="input-group">
+                                <input type="text" id="minTTMProfit" placeholder="$0" class="range-input">
+                            </div>
+                            <span class="range-separator">—</span>
+                            <div class="input-group">
+                                <input type="text" id="maxTTMProfit" placeholder="$200,000+" class="range-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="next-btn" onclick="nextStep()">Next <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 8: Industries and Tech Stacks -->
+        <div class="step-container" id="step8">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">Which industries, business models, and tech stacks interest you?</h1>
+                        <p class="question-subtitle">Choose your interests</p>
+                        
+                        <div class="filter-section">
+                            <h3 class="filter-title">Industries</h3>
+                            <div class="filter-pills-container">
+                                <div class="filter-pills">
+                                    <button class="filter-pill" data-category="industries" data-value="transportation">Transportation</button>
+                                    <button class="filter-pill" data-category="industries" data-value="power">Power Generation & Storage</button>
+                                    <button class="filter-pill" data-category="industries" data-value="productivity">Productivity</button>
+                                    <button class="filter-pill" data-category="industries" data-value="arts">Arts & Entertainment</button>
+                                </div>
+                                <button class="scroll-btn scroll-right" data-target="industries">→</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-section">
+                            <h3 class="filter-title">Business models</h3>
+                            <div class="filter-pills-container">
+                                <div class="filter-pills">
+                                    <button class="filter-pill" data-category="business" data-value="b2c">Business-to-consumer (B2C)</button>
+                                    <button class="filter-pill" data-category="business" data-value="services">Services</button>
+                                    <button class="filter-pill" data-category="business" data-value="dropshipping">Dropshipping</button>
+                                    <button class="filter-pill" data-category="business" data-value="agency">Agency-based</button>
+                                </div>
+                                <button class="scroll-btn scroll-right" data-target="business">→</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-section">
+                            <h3 class="filter-title">Tech stacks</h3>
+                            <div class="filter-pills-container">
+                                <div class="filter-pills">
+                                    <button class="filter-pill" data-category="tech" data-value="c">C and C++</button>
+                                    <button class="filter-pill" data-category="tech" data-value="elasticsearch">ElasticSearch</button>
+                                    <button class="filter-pill" data-category="tech" data-value="openai">OpenAI</button>
+                                    <button class="filter-pill" data-category="tech" data-value="windows">Microsoft Windows</button>
+                                    <button class="filter-pill" data-category="tech" data-value="bubble">Bubble</button>
+                                </div>
+                                <button class="scroll-btn scroll-right" data-target="tech">→</button>
+                            </div>
+                        </div>
+                        
+                        <div class="custom-input-section">
+                            <label for="customInterest" class="custom-label">Enter an interest and press enter to add</label>
+                            <input type="text" id="customInterest" placeholder="Business-to-business (B2B)" class="custom-input">
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="skip-btn" onclick="nextStep()">Skip</button>
+                        <button class="next-btn" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 9: Country Preference -->
+        <div class="step-container" id="step9">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">In which countries would you prefer your startup to reside?</h1>
+                        
+                        <div class="search-section">
+                            <label for="countrySearch" class="search-label">Country</label>
+                            <input type="text" id="countrySearch" placeholder="Search for a country" class="search-input">
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="skip-btn" onclick="nextStep()">Skip</button>
+                        <button class="next-btn disabled" onclick="nextStep()" disabled>Next</button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 10: Recommendation Preference -->
+        <div class="step-container" id="step10">
+            <div class="step-content">
+                <div class="step-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="question-content">
+                        <h1 class="question-title">How should we use your criteria to recommend startups?</h1>
+                        
+                        <div class="preference-options">
+                            <button class="preference-card active" data-value="flexible">
+                                <div class="preference-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Flexible</h3>
+                                <p>We'll recommend startups matching or closely aligning with your criteria.</p>
+                            </button>
+                            
+                            <button class="preference-card" data-value="strict">
+                                <div class="preference-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                                <h3>Strict</h3>
+                                <p>We'll only recommend startups exactly matching your criteria.</p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="back-text-btn" onclick="goBack()">Back</button>
+                        <button class="cta-btn" onclick="seeRecommendations()">See my recommendations</button>
+                    </div>
+                </div>
+                
+                <div class="step-right">
+                    <!-- Empty for this step -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 11: Recommendations -->
+        <div class="step-container" id="step11">
+            <div class="recommendations-container">
+                <div class="recommendations-header">
+                    <h1 class="recommendations-title">Our top recommendations</h1>
+                </div>
+                
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <div class="rec-header">
+                            <div class="rec-icon saas">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="rec-type">SaaS</span>
+                        </div>
+                        <h3 class="rec-title">Discover the UK's Rising Stars with this SaaS business with multiple plans.</h3>
+                        <div class="rec-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$0</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$0</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$3k</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="rec-header">
+                            <div class="rec-icon saas">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="rec-type">SaaS</span>
+                        </div>
+                        <h3 class="rec-title">Largest Plugin Portfolio for Bubble.io & Bubble Gold Tier Agency.</h3>
+                        <div class="rec-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$813k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$328k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$5.7M</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="rec-header">
+                            <div class="rec-icon digital">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <span class="rec-type">Digital</span>
+                        </div>
+                        <h3 class="rec-title">Collection of playlist tools for music streaming service powerusers: DJs, entertainers, music lovers</h3>
+                        <div class="rec-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$560</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$500</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$10k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recommendations-footer">
+                    <button class="view-more-btn" onclick="window.open('browse-listings.html', '_blank')">
+                        View more recommendations 
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="notification-settings">
+                        <p>We'll notify you when we add new startups matching your criteria.</p>
+                        <p>To receive these notifications in a roundup, please <a href="#" class="settings-link">adjust your settings</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1 .2 0 .3 0 .5-.1L12 19h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="onboarding-script.js"></script>
+</body>
+</html>

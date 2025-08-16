@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Buyers - Caprae Capital</title>
+    <link rel="stylesheet" href="buyer-profiles-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                        <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            <nav class="nav-links">
+                <a href="browse-listings.html">Browse</a>
+                <a href="inbox.html">Messages</a>
+                <a href="#" class="active">Buyers</a>
+                <a href="#">Profile</a>
+            </nav>
+            <div class="nav-buttons">
+                <div class="user-avatar">
+                    <span>SB</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1>Browse Qualified Buyers</h1>
+                    <p>Choose from verified buyers who match your business profile</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">47</span>
+                        <span class="stat-label">Qualified Matches</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Premium Buyers</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-section">
+                <div class="filters-header">
+                    <h3>Filter Buyers</h3>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>Budget Range</label>
+                        <div class="filter-options">
+                            <button class="filter-pill active">$1M - $5M</button>
+                            <button class="filter-pill">$5M - $10M</button>
+                            <button class="filter-pill">$10M+</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Industry Focus</label>
+                        <div class="filter-options">
+                            <button class="filter-pill active">SaaS</button>
+                            <button class="filter-pill">E-commerce</button>
+                            <button class="filter-pill">AI/ML</button>
+                            <button class="filter-pill">Fintech</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Deal Timeline</label>
+                        <div class="filter-options">
+                            <button class="filter-pill">30-60 days</button>
+                            <button class="filter-pill active">60-90 days</button>
+                            <button class="filter-pill">90+ days</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buyer Cards Grid -->
+            <div class="buyers-grid">
+                <!-- Premium Buyer Card -->
+                <div class="buyer-card premium-card" data-buyer-id="1">
+                    <div class="card-header">
+                        <div class="buyer-badge premium">
+                            <span class="crown-icon">👑</span>
+                            <span>Premium Buyer</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn bookmark">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 2V14L8 11L13 14V2H3Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                            <button class="action-btn more">⋯</button>
+                        </div>
+                    </div>
+
+                    <div class="buyer-profile">
+                        <div class="buyer-avatar large">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="John Doe">
+                            <div class="online-indicator"></div>
+                        </div>
+                        <div class="buyer-info">
+                            <h3>John Doe</h3>
+                            <p class="buyer-title">Managing Partner at TechVentures</p>
+                            <div class="buyer-location">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M6 1C3.79086 1 2 2.79086 2 5C2 8 6 11 6 11C6 11 10 8 10 5C10 2.79086 8.20914 1 6 1Z" stroke="#6B7280" stroke-width="1"/>
+                                    <circle cx="6" cy="5" r="1.5" stroke="#6B7280" stroke-width="1"/>
+                                </svg>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-metrics">
+                        <div class="metric-row">
+                            <div class="metric">
+                                <span class="metric-label">Budget Range</span>
+                                <span class="metric-value">$2M - $8M</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Timeline</span>
+                                <span class="metric-value">45-60 days</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <div class="metric">
+                                <span class="metric-label">Deals Completed</span>
+                                <span class="metric-value success">12 acquisitions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Success Rate</span>
+                                <span class="metric-value success">94%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-highlights">
+                        <h4>Why Choose John?</h4>
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">⚡</span>
+                                <span>Fast decision maker - 7 day avg response</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">💰</span>
+                                <span>Pays 15% above market average</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🤝</span>
+                                <span>Founder-friendly terms & retention options</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acquisition-history">
+                        <h4>Recent Acquisitions</h4>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="company-info">
+                                    <span class="company-name">DataFlow SaaS</span>
+                                    <span class="deal-size">$3.2M</span>
+                                </div>
+                                <span class="deal-date">3 months ago</span>
+                            </div>
+                            <div class="history-item">
+                                <div class="company-info">
+                                    <span class="company-name">CloudSync Pro</span>
+                                    <span class="deal-size">$1.8M</span>
+                                </div>
+                                <span class="deal-date">6 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compatibility-score">
+                        <div class="score-header">
+                            <span class="score-label">Compatibility Score</span>
+                            <div class="score-circle">
+                                <span class="score-number">94%</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-factors">
+                            <div class="factor match">✓ Budget aligned</div>
+                            <div class="factor match">✓ Industry expertise</div>
+                            <div class="factor match">✓ Timeline fits</div>
+                            <div class="factor warning">⚠ Geographic preference</div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions-bottom">
+                        <button class="btn-reject">
+                            <span>Pass</span>
+                        </button>
+                        <button class="btn-connect">
+                            <span>Connect</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Standard Buyer Card -->
+                <div class="buyer-card" data-buyer-id="2">
+                    <div class="card-header">
+                        <div class="buyer-badge verified">
+                            <span class="verify-icon">✓</span>
+                            <span>Verified</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn bookmark">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 2V14L8 11L13 14V2H3Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                            <button class="action-btn more">⋯</button>
+                        </div>
+                    </div>
+
+                    <div class="buyer-profile">
+                        <div class="buyer-avatar large">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Michael Chen">
+                            <div class="online-indicator offline"></div>
+                        </div>
+                        <div class="buyer-info">
+                            <h3>Michael Chen</h3>
+                            <p class="buyer-title">Principal at Growth Capital Partners</p>
+                            <div class="buyer-location">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M6 1C3.79086 1 2 2.79086 2 5C2 8 6 11 6 11C6 11 10 8 10 5C10 2.79086 8.20914 1 6 1Z" stroke="#6B7280" stroke-width="1"/>
+                                    <circle cx="6" cy="5" r="1.5" stroke="#6B7280" stroke-width="1"/>
+                                </svg>
+                                <span>New York, NY</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-metrics">
+                        <div class="metric-row">
+                            <div class="metric">
+                                <span class="metric-label">Budget Range</span>
+                                <span class="metric-value">$1M - $5M</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Timeline</span>
+                                <span class="metric-value">60-90 days</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <div class="metric">
+                                <span class="metric-label">Deals Completed</span>
+                                <span class="metric-value">7 acquisitions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Success Rate</span>
+                                <span class="metric-value">86%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-highlights">
+                        <h4>Why Choose Michael?</h4>
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📈</span>
+                                <span>Focuses on growth-stage SaaS companies</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🔧</span>
+                                <span>Hands-on operational support post-acquisition</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">💼</span>
+                                <span>Strong portfolio of successful exits</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compatibility-score">
+                        <div class="score-header">
+                            <span class="score-label">Compatibility Score</span>
+                            <div class="score-circle moderate">
+                                <span class="score-number">78%</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-factors">
+                            <div class="factor match">✓ Industry expertise</div>
+                            <div class="factor match">✓ Timeline fits</div>
+                            <div class="factor warning">⚠ Budget on lower end</div>
+                            <div class="factor mismatch">✗ Prefers majority stakes</div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions-bottom">
+                        <button class="btn-reject">
+                            <span>Pass</span>
+                        </button>
+                        <button class="btn-connect">
+                            <span>Connect</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Rising Star Buyer Card -->
+                <div class="buyer-card" data-buyer-id="3">
+                    <div class="card-header">
+                        <div class="buyer-badge rising">
+                            <span class="star-icon">⭐</span>
+                            <span>Rising Star</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn bookmark">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 2V14L8 11L13 14V2H3Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                            <button class="action-btn more">⋯</button>
+                        </div>
+                    </div>
+
+                    <div class="buyer-profile">
+                        <div class="buyer-avatar large">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b9d5131c?w=100&h=100&fit=crop&crop=face" alt="Sarah Williams">
+                        </div>
+                        <div class="buyer-info">
+                            <h3>Sarah Williams</h3>
+                            <p class="buyer-title">Founder & CEO at Digital Dynamics</p>
+                            <div class="buyer-location">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M6 1C3.79086 1 2 2.79086 2 5C2 8 6 11 6 11C6 11 10 8 10 5C10 2.79086 8.20914 1 6 1Z" stroke="#6B7280" stroke-width="1"/>
+                                    <circle cx="6" cy="5" r="1.5" stroke="#6B7280" stroke-width="1"/>
+                                </svg>
+                                <span>Austin, TX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-metrics">
+                        <div class="metric-row">
+                            <div class="metric">
+                                <span class="metric-label">Budget Range</span>
+                                <span class="metric-value">$500K - $3M</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Timeline</span>
+                                <span class="metric-value">30-45 days</span>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <div class="metric">
+                                <span class="metric-label">Deals Completed</span>
+                                <span class="metric-value">3 acquisitions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Success Rate</span>
+                                <span class="metric-value">100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buyer-highlights">
+                        <h4>Why Choose Sarah?</h4>
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🚀</span>
+                                <span>Serial entrepreneur with 2 successful exits</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">💡</span>
+                                <span>Values innovation and founder vision</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📱</span>
+                                <span>Strong in mobile and consumer tech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compatibility-score">
+                        <div class="score-header">
+                            <span class="score-label">Compatibility Score</span>
+                            <div class="score-circle good">
+                                <span class="score-number">82%</span>
+                            </div>
+                        </div>
+                        <div class="compatibility-factors">
+                            <div class="factor match">✓ Fast decision maker</div>
+                            <div class="factor match">✓ Tech expertise</div>
+                            <div class="factor match">✓ Founder-friendly</div>
+                            <div class="factor warning">⚠ Smaller budget range</div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions-bottom">
+                        <button class="btn-reject">
+                            <span>Pass</span>
+                        </button>
+                        <button class="btn-connect">
+                            <span>Connect</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-section">
+                <button class="btn-load-more">Load More Buyers</button>
+                <p class="load-more-text">Showing 3 of 47 qualified buyers</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="buyer-profiles-script.js"></script>
+</body>
+</html>

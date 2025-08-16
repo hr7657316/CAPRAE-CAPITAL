@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caprae Capital - Design Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(45deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: #6366f1;
+            border-bottom: 3px solid #e0e7ff;
+            padding-bottom: 12px;
+        }
+
+        .design-system {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .color-item {
+            text-align: center;
+        }
+
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            margin: 0 auto 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-swatch.primary { background: #6366f1; }
+        .color-swatch.success { background: #10b981; }
+        .color-swatch.warning { background: #f59e0b; }
+        .color-swatch.gray { background: #6b7280; }
+        .color-swatch.light { background: #f8fafc; border: 2px solid #e2e8f0; }
+
+        .typography-showcase {
+            space-y: 20px;
+        }
+
+        .typography-showcase h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .typography-showcase h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .typography-showcase p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .component-item {
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .btn-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #6366f1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5b5bd6;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #6366f1;
+            border: 2px solid #6366f1;
+        }
+
+        .btn-secondary:hover {
+            background: #6366f1;
+            color: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #e5e7eb;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1f2937;
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .mockup-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .mockup-item {
+            text-align: center;
+        }
+
+        .mockup-frame {
+            background: #1f2937;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .mockup-screen {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 16px;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 16px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #6366f1;
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .step-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .process-flow {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <header class="header">
+            <h1>Caprae Capital</h1>
+            <p>AI-Powered M&A Platform Design Portfolio</p>
+        </header>
+
+        <section class="section">
+            <h2>🎨 Design System</h2>
+            <p>A comprehensive design system built for trust, clarity, and user empowerment in high-stakes business transactions.</p>
+            
+            <div class="design-system">
+                <div>
+                    <h3>Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-item">
+                            <div class="color-swatch primary"></div>
+                            <h4>Primary</h4>
+                            <p>#6366F1</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-swatch success"></div>
+                            <h4>Success</h4>
+                            <p>#10B981</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-swatch warning"></div>
+                            <h4>Warning</h4>
+                            <p>#F59E0B</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-swatch gray"></div>
+                            <h4>Gray</h4>
+                            <p>#6B7280</p>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-swatch light"></div>
+                            <h4>Light</h4>
+                            <p>#F8FAFC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Typography</h3>
+                    <div class="typography-showcase">
+                        <h1>Poppins Bold</h1>
+                        <h2>Inter Semibold</h2>
+                        <p>Inter Regular for body text and detailed information throughout the platform.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-grid">
+                <div class="component-item">
+                    <h4>Primary Actions</h4>
+                    <a href="#" class="btn-demo btn-primary">Get Started</a>
+                    <a href="#" class="btn-demo btn-secondary">Learn More</a>
+                </div>
+                <div class="component-item">
+                    <h4>Status Indicators</h4>
+                    <span style="background: #10b981; color: white; padding: 4px 12px; border-radius: 16px; font-size: 0.875rem;">✓ Verified</span>
+                    <span style="background: #f59e0b; color: white; padding: 4px 12px; border-radius: 16px; font-size: 0.875rem; margin-left: 8px;">⏳ Pending</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💡 Core Innovation</h2>
+            <p>Revolutionary seller-first approach that flips traditional M&A dynamics</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Seller Empowerment</h3>
+                    <p>First platform where sellers browse and choose their ideal buyers, creating a "Bumble for M&A" experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Insights</h3>
+                    <p>Gemini AI provides real-time document analysis, risk assessment, and deal recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Trust & Security</h3>
+                    <p>Verified buyer profiles with acquisition history build confidence and transparency.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎯 User Experience Flow</h2>
+            <p>Intuitive journey from discovery to deal completion</p>
+            
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📝</div>
+                    <h3>Smart Onboarding</h3>
+                    <p>Role-specific questionnaires ensure perfect compatibility matching</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">👥</div>
+                    <h3>Browse & Match</h3>
+                    <p>Sellers view curated buyer profiles and choose their preferred partners</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">🤝</div>
+                    <h3>AI-Guided Deal</h3>
+                    <p>Automated workflows and insights streamline the entire acquisition process</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📱 Platform Showcase</h2>
+            <p>Key interface designs demonstrating user-centered approach</p>
+            
+            <div class="mockup-showcase">
+                <div class="mockup-item">
+                    <div class="mockup-frame">
+                        <div class="mockup-screen">
+                            <h3>🏠 Landing Page</h3>
+                            <p>Clean, trust-building design that clearly communicates the seller-first value proposition</p>
+                            <div style="margin-top: 20px;">
+                                <div style="background: #6366f1; color: white; padding: 8px 16px; border-radius: 6px; display: inline-block;">Hero CTA</div>
+                                <div style="background: #f3f4f6; padding: 8px 16px; border-radius: 6px; display: inline-block; margin-left: 8px;">Secondary Action</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Landing Experience</h4>
+                </div>
+                
+                <div class="mockup-item">
+                    <div class="mockup-frame">
+                        <div class="mockup-screen">
+                            <h3>👥 Buyer Profiles</h3>
+                            <p>Tinder-style browsing with detailed buyer information and acquisition history</p>
+                            <div style="margin-top: 20px;">
+                                <div style="background: #10b981; color: white; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem;">✓ Verified</div>
+                                <div style="background: #f59e0b; color: white; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; margin-left: 8px;">👑 Premium</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Discovery Interface</h4>
+                </div>
+                
+                <div class="mockup-item">
+                    <div class="mockup-frame">
+                        <div class="mockup-screen">
+                            <h3>🤖 AI Deal Room</h3>
+                            <p>Real-time document analysis and deal pipeline management with AI insights</p>
+                            <div style="margin-top: 20px;">
+                                <div style="background: #e0e7ff; padding: 8px; border-radius: 4px; font-size: 0.75rem;">🤖 AI Analysis: 94% Confidence</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Deal Management</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📊 Success Metrics</h2>
+            <p>Measurable impact demonstrating design and product effectiveness</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">87%</span>
+                    <span class="stat-label">Deal Completion Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">Days Average Deal Time</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15%</span>
+                    <span class="stat-label">Higher Valuations</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4.8/5</span>
+                    <span class="stat-label">User Satisfaction</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Technical Excellence</h2>
+            <p>Frontend engineering best practices and performance optimization</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Performance</h3>
+                    <p>95+ Lighthouse score with optimized loading, lazy loading, and efficient asset management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♿</div>
+                    <h3>Accessibility</h3>
+                    <p>WCAG 2.1 AA compliant with screen reader support and keyboard navigation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach with seamless experience across all device sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Security</h3>
+                    <p>Enterprise-grade security with end-to-end encryption and SOC 2 compliance.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Caprae Capital Design Portfolio - Demonstrating design excellence and technical innovation</p>
+        </footer>
+    </div>
+</body>
+</html>

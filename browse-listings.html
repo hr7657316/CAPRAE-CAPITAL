@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Listings - Caprae Capital</title>
+    <link rel="stylesheet" href="browse-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="browse-header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                        <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            
+                        <nav class="main-nav">
+                <a href="browse-listings.html" class="nav-link active">Listings</a>
+                <a href="#" class="nav-link">My deals</a>
+                <a href="inbox.html" class="nav-link">Inbox</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="user-avatars">
+                    <div class="avatar-small"></div>
+                    <div class="avatar-small"></div>
+                    <div class="avatar-small"></div>
+                </div>
+                <span class="help-text">Need help?</span>
+                <button class="upgrade-btn">Upgrade</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="browse-main">
+        <div class="browse-container">
+            <!-- Sub Navigation -->
+            <div class="sub-nav">
+                <button class="sub-nav-btn active">Browse</button>
+                <button class="sub-nav-btn">All listings</button>
+                <button class="sub-nav-btn">AI Agent</button>
+            </div>
+
+            <!-- Collections Section -->
+            <section class="collections-section">
+                <div class="section-header">
+                    <h2>Collections</h2>
+                    <div class="nav-arrows">
+                        <button class="nav-arrow prev">‹</button>
+                        <button class="nav-arrow next">›</button>
+                    </div>
+                </div>
+                
+                <div class="collections-grid">
+                    <div class="collection-card locked">
+                        <div class="collection-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div class="lock-icon">🔒</div>
+                        <h3>Reduced price</h3>
+                        <p class="upgrade-text">Upgrade to unlock</p>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                            </svg>
+                        </div>
+                        <h3>Profitable SaaS</h3>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                            </svg>
+                        </div>
+                        <h3>Recast financials</h3>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Under M&A advisory</h3>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <h3>Established startups</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Based on Criteria Section -->
+            <section class="criteria-section">
+                <div class="section-header">
+                    <h2>Based on your criteria</h2>
+                    <div class="criteria-actions">
+                        <button class="criteria-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/>
+                            </svg>
+                            Criteria
+                        </button>
+                        <div class="nav-arrows">
+                            <button class="nav-arrow prev">‹</button>
+                            <button class="nav-arrow next">›</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listings Grid -->
+                <div class="listings-grid">
+                    <div class="listing-card" onclick="window.location.href='listing-detail.html'" style="cursor: pointer;">
+                        <div class="listing-header">
+                            <div class="listing-type">
+                                <div class="type-icon saas">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <span>SaaS</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn favorite" onclick="event.stopPropagation()">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <h3 class="listing-title">SEO automation tool for businesses to boost web traffic with AI-driven backlinks</h3>
+                        
+                        <div class="listing-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$495k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$154k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$552k</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="listing-card">
+                        <div class="listing-header">
+                            <div class="listing-type">
+                                <div class="type-icon saas">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <span>SaaS</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn favorite">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <h3 class="listing-title">Largest Plugin Portfolio for Bubble.io & Bubble Gold Tier Agency.</h3>
+                        
+                        <div class="listing-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$813k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$328k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$5.7M</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="listing-card">
+                        <div class="listing-header">
+                            <div class="listing-type">
+                                <div class="type-icon digital">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span>Digital</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn favorite">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <h3 class="listing-title">Collection of playlist tools for music streaming service powerusers: DJs, entertainers, music lovers</h3>
+                        
+                        <div class="listing-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$560</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$500</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$10k</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="listing-card">
+                        <div class="listing-header">
+                            <div class="listing-type">
+                                <div class="type-icon saas">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                                <span>SaaS</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn favorite">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <h3 class="listing-title">Venture Studio for Real Estate Tech. Operating 21 Companies.</h3>
+                        
+                        <div class="listing-metrics">
+                            <div class="metric">
+                                <span class="metric-label">TTM REVENUE</span>
+                                <span class="metric-value">$499k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">TTM PROFIT</span>
+                                <span class="metric-value">$89k</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">ASKING PRICE</span>
+                                <span class="metric-value">$5M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More -->
+                <div class="load-more">
+                    <div class="nav-arrows">
+                        <button class="nav-arrow prev">‹</button>
+                        <button class="nav-arrow next">›</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1 .2 0 .3 0 .5-.1L12 19h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="browse-script.js"></script>
+</body>
+</html>

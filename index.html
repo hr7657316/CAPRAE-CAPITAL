@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caprae Capital - Where Sellers Choose Their Perfect Buyers</title>
+    <link rel="stylesheet" href="new-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                        <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">caprae capital</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#how-it-works">How it Works</a>
+                <a href="#for-sellers">For Sellers</a>
+                <a href="#for-buyers">For Buyers</a>
+                <a href="buyer-profiles.html">Browse Buyers</a>
+                <a href="deal-room.html">Deal Room</a>
+            </nav>
+            <div class="nav-buttons">
+                <button class="btn-secondary">Sign In</button>
+                <button class="btn-primary">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">✨</span>
+                        <span>Sellers Choose First</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Where <span class="highlight">sellers</span> find their<br>
+                        perfect buyers, not the other way around
+                    </h1>
+                    <p class="hero-subtitle">
+                        We've flipped the script. Like Bumble for business acquisitions — sellers browse, match, and initiate conversations with qualified buyers. Our AI-powered platform then guides you through every step of the deal.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-cta" onclick="window.location.href='seller-onboarding.html'">
+                            <span>I'm Selling</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <button class="btn-outline" onclick="window.location.href='buyer-onboarding.html'">
+                            <span>I'm Buying</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Successful Matches</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">87%</span>
+                            <span class="stat-label">Deal Completion Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">45 Days</span>
+                            <span class="stat-label">Average Deal Time</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-card seller-card">
+                        <div class="card-header">
+                            <div class="card-avatar seller-avatar">
+                                <span>SB</span>
+                            </div>
+                            <div class="card-info">
+                                <h4>Sarah's SaaS Business</h4>
+                                <p>$2.3M ARR • 12% Growth</p>
+                            </div>
+                            <div class="card-status browsing">Browsing</div>
+                        </div>
+                        <div class="card-preview">
+                            <div class="buyer-mini-card">
+                                <div class="mini-avatar">JD</div>
+                                <div class="mini-info">
+                                    <span>John Doe</span>
+                                    <span>$5M Budget</span>
+                                </div>
+                                <button class="mini-action like">💖</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-card match-card">
+                        <div class="match-header">
+                            <div class="match-avatars">
+                                <div class="avatar-pair">
+                                    <div class="avatar seller">SB</div>
+                                    <div class="avatar buyer">JD</div>
+                                </div>
+                                <div class="match-icon">💫</div>
+                            </div>
+                            <h4>It's a Match!</h4>
+                            <p>Sarah reached out to John</p>
+                        </div>
+                        <div class="ai-assistant">
+                            <div class="ai-badge">
+                                <span class="ai-icon">🤖</span>
+                                <span>AI Assistant</span>
+                            </div>
+                            <p>I've analyzed both profiles and prepared talking points for your first conversation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How Caprae Capital Works</h2>
+                    <p>A modern approach to business acquisitions that puts sellers in control</p>
+                </div>
+                
+                <div class="process-flow">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">📝</div>
+                        <h3>Smart Onboarding</h3>
+                        <p>Separate questionnaires for buyers and sellers ensure perfect compatibility matching</p>
+                    </div>
+                    
+                    <div class="process-arrow">→</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">🎯</div>
+                        <h3>Sellers Browse & Match</h3>
+                        <p>Sellers view curated buyer profiles and choose who they want to connect with</p>
+                    </div>
+                    
+                    <div class="process-arrow">→</div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">🤝</div>
+                        <h3>Guided Acquisition</h3>
+                        <p>AI-powered tools and workflows streamline due diligence and deal completion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Features -->
+        <section id="platform" class="platform-features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Built to Maximize Deal Success</h2>
+                    <p>Every feature designed to reduce friction and increase completion rates</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>AI Document Analyzer</h3>
+                        <p>Automatically reviews and summarizes financial documents, highlighting key metrics and potential red flags</p>
+                        <div class="feature-demo">
+                            <div class="demo-document">
+                                <div class="doc-header">Financial_Report_Q3.pdf</div>
+                                <div class="ai-summary">
+                                    <span class="ai-badge-small">AI Summary</span>
+                                    <p>Revenue: $2.3M (+12% YoY)<br>
+                                    Profit Margin: 23%<br>
+                                    ⚠️ Note: Customer concentration risk</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Smart Matching Engine</h3>
+                        <p>Our algorithm considers budget, industry, growth stage, and 50+ other factors for perfect matches</p>
+                        <div class="feature-demo">
+                            <div class="match-score">
+                                <div class="score-circle">
+                                    <span class="score">94%</span>
+                                    <span class="score-label">Match Score</span>
+                                </div>
+                                <div class="match-factors">
+                                    <div class="factor">Budget Aligned ✓</div>
+                                    <div class="factor">Industry Fit ✓</div>
+                                    <div class="factor">Timeline Match ✓</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Secure Deal Rooms</h3>
+                        <p>Encrypted spaces for document sharing, communication, and milestone tracking throughout the acquisition</p>
+                        <div class="feature-demo">
+                            <div class="deal-room">
+                                <div class="room-header">Deal Room: TechCorp Acquisition</div>
+                                <div class="milestone-tracker">
+                                    <div class="milestone completed">Due Diligence ✓</div>
+                                    <div class="milestone active">Valuation Review</div>
+                                    <div class="milestone pending">Final Terms</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Sellers Section -->
+        <section id="for-sellers" class="for-sellers">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="content-side">
+                        <div class="section-badge">For Sellers</div>
+                        <h2>Take Control of Your Exit</h2>
+                        <p>No more waiting for buyers to find you. Browse qualified buyers, see their acquisition history, and choose who deserves your business.</p>
+                        
+                        <div class="benefit-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎯</div>
+                                <div class="benefit-text">
+                                    <h4>Choose Your Buyer</h4>
+                                    <p>Browse verified buyers and their acquisition history before making contact</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">💰</div>
+                                <div class="benefit-text">
+                                    <h4>Better Valuations</h4>
+                                    <p>When sellers choose, competition drives higher offers and better terms</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">⚡</div>
+                                <div class="benefit-text">
+                                    <h4>Faster Deals</h4>
+                                    <p>Skip the tire kickers. Connect only with serious, pre-qualified buyers</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-cta-large">Start Browsing Buyers</button>
+                    </div>
+                    
+                    <div class="visual-side">
+                        <div class="buyer-browser">
+                            <div class="browser-header">
+                                <h4>Qualified Buyers for You</h4>
+                                <div class="filter-pills">
+                                    <span class="pill active">SaaS Focused</span>
+                                    <span class="pill">$1M-5M Budget</span>
+                                </div>
+                            </div>
+                            <div class="buyer-cards">
+                                <div class="buyer-card featured">
+                                    <div class="buyer-header">
+                                        <div class="buyer-avatar">JD</div>
+                                        <div class="buyer-info">
+                                            <h5>John Doe</h5>
+                                            <p>Serial Acquirer • 8 Deals</p>
+                                        </div>
+                                        <div class="buyer-badge premium">Premium</div>
+                                    </div>
+                                    <div class="buyer-stats">
+                                        <div class="stat">
+                                            <span class="stat-value">$3.5M</span>
+                                            <span class="stat-label">Budget Range</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">45 Days</span>
+                                            <span class="stat-label">Avg Close Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="buyer-actions">
+                                        <button class="btn-connect">Connect</button>
+                                        <button class="btn-view">View Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Buyers Section -->
+        <section id="for-buyers" class="for-buyers">
+            <div class="container">
+                <div class="split-layout reverse">
+                    <div class="visual-side">
+                        <div class="buyer-dashboard">
+                            <div class="dashboard-header">
+                                <h4>Your Acquisition Dashboard</h4>
+                                <div class="notification-badge">3 New Matches</div>
+                            </div>
+                            <div class="dashboard-content">
+                                <div class="match-notification">
+                                    <div class="match-avatar">SB</div>
+                                    <div class="match-info">
+                                        <h5>Sarah's SaaS Business wants to connect!</h5>
+                                        <p>$2.3M ARR • Perfect fit for your criteria</p>
+                                    </div>
+                                    <button class="btn-respond">Respond</button>
+                                </div>
+                                <div class="ai-insights">
+                                    <div class="ai-badge">
+                                        <span class="ai-icon">🤖</span>
+                                        <span>AI Insights</span>
+                                    </div>
+                                    <p>This business matches 94% of your preferences. Strong recurring revenue and growing market.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-side">
+                        <div class="section-badge">For Buyers</div>
+                        <h2>Get Chosen by Premium Sellers</h2>
+                        <p>Build a compelling buyer profile and let motivated sellers come to you. No more cold outreach or bidding wars.</p>
+                        
+                        <div class="benefit-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎖️</div>
+                                <div class="benefit-text">
+                                    <h4>Premium Deal Flow</h4>
+                                    <p>Sellers only reach out when they're serious. No time wasted on unmotivated sellers</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📈</div>
+                                <div class="benefit-text">
+                                    <h4>AI-Powered Insights</h4>
+                                    <p>Get detailed analysis of every opportunity before you even respond</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🔒</div>
+                                <div class="benefit-text">
+                                    <h4>Verified Opportunities</h4>
+                                    <p>All sellers and their businesses are verified before joining the platform</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-cta-large" onclick="window.location.href='buyer-onboarding.html'">Create Buyer Profile</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Change How Deals Get Done?</h2>
+                    <p>Join the platform where sellers have the power to choose their perfect buyers</p>
+                    <div class="cta-buttons">
+                        <button class="btn-cta-large">
+                            <span>Start as a Seller</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                        <button class="btn-outline-large" onclick="window.location.href='buyer-onboarding.html'">
+                            <span>Join as a Buyer</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" fill="currentColor"/>
+                                <path d="M12 8L8 10V14L12 16L16 14V10L12 8Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">caprae capital</span>
+                    </div>
+                    <p>Modernizing business acquisitions through seller-first matching</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="#">For Sellers</a>
+                        <a href="#">For Buyers</a>
+                        <a href="#">How it Works</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#">Blog</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Deal Guide</a>
+                        <a href="#">API Docs</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Caprae Capital. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
